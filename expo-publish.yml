@@ -1,0 +1,39 @@
+name: Expo Publish
+#source: https://github.com/marketplace/actions/expo-github-action
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - apps/app/**
+      # monorepo folder structure
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🏗 Setup repo
+        uses: actions/checkout@v2
+
+      - name: 🏗 Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          cache: yarn
+          cache-dependency-path: '**/yarn.lock'
+          # monorepo folder structure
+
+      - name: 🏗 Setup Expo
+        uses: expo/expo-github-action@v7
+        with:
+          expo-version: 5.x.x
+          token: ${{ secrets.EXPO_TOKEN }}
+
+      - name: 📦 Install dependencies
+        run: yarn install --immutable
+
+      - name: 🚀 Publish app
+        run: yarn workspace app expo publish --non-interactive
+        # if working in single package repo,
+        # ignore `workspace app`

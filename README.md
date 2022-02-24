@@ -2,7 +2,7 @@
 Github Actions to help developers with common CI/CD tasks
 
 ## Deploy
-- [Expo Publish](https://github.com/marketplace/actions/expo-github-action)
+- [Expo Publish](./expo-publish.yml)
   - Automate your deploys to Expo Cloud
 - [Expo Preview Channel](https://github.com/expo/expo-github-action#publish-a-preview-from-pr)
   - Create Preview Releases on PRs with QR Code comment on success, better DevEx in code review
