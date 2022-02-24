@@ -1,0 +1,19 @@
+name: Rubocop Lint
+
+on:
+  workflow_dispatch:
+
+jobs:
+  rubocop:
+    name: Rubocop
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - name: Install Rubocop
+        run: gem install rubocop
+      - name: Check code
+        run: bundle exec rubocop --only Lint/Debugger,Lint/DuplicateMethods,Lint/UnreachableCode,Lint/Void
