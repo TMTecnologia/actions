@@ -4,8 +4,8 @@ Github Actions to help developers with common CI/CD tasks
 ## Deploy
 - [Expo Publish](https://github.com/marketplace/actions/expo-github-action)
   - Automate your deploys to Expo Cloud
-- [Expo Preview Channel](https://github.com/expo/expo-preview-action#readme)
-  - Create Preview Releases on PRs, better DevEx in code review
+- [Expo Preview Channel](https://github.com/expo/expo-github-action#publish-a-preview-from-pr)
+  - Create Preview Releases on PRs with QR Code comment on success, better DevEx in code review
 - [Heroku](https://github.com/marketplace/actions/deploy-to-heroku)
 
 ## Lint
@@ -32,7 +32,7 @@ Github Actions to help developers with common CI/CD tasks
   - add labels based on regex match
 - [label actions](https://github.com/marketplace/actions/label-actions)
   - uses yaml like format to match, can also control some actions
-- Honarable mention: [issues-helper](https://github.com/marketplace/actions/issues-helper)
+- Honorable mention: [issues-helper](https://github.com/marketplace/actions/issues-helper)
   - [en-US](https://github.com/actions-cool/issues-helper/blob/main/README.en-US.md)
 
 ## Releases
