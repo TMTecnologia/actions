@@ -21,11 +21,13 @@ Github Actions to help developers with common CI/CD tasks
   - Seems like a nice way to visualize test data on pipeline
 - [Jest Coverage Report](https://github.com/marketplace/actions/jest-coverage-report)
   - Show test results on PR comment
+- [DangerJS](https://danger.systems/js/)
+  - Automatic feedback, code review triage
 
 ## 🚧 Repo Management
+- [labelling issues](https://docs.github.com/en/actions/managing-issues-and-pull-requests/adding-labels-to-issues)
 
-
-## Publish Packages
+## Releases
 - [Semantic Release + Github Action](https://github.com/semantic-release/semantic-release/blob/master/docs/recipes/ci-configurations/github-actions.md)
   - [repo](https://github.com/semantic-release/semantic-release)
   - [gitmoji plugin](https://github.com/momocow/semantic-release-gitmoji)
@@ -33,3 +35,4 @@ Github Actions to help developers with common CI/CD tasks
   - Creates Releases
 - [Release Drafter](https://github.com/marketplace/actions/release-drafter)
   - PR based release drafting
+- [Auto](https://intuit.github.io/auto/docs)
