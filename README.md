@@ -25,7 +25,15 @@ Github Actions to help developers with common CI/CD tasks
   - Automatic feedback, code review triage
 
 ## 🚧 Repo Management
-- [labelling issues](https://docs.github.com/en/actions/managing-issues-and-pull-requests/adding-labels-to-issues)
+
+### labelling
+- [DOC on labelling issues](https://docs.github.com/en/actions/managing-issues-and-pull-requests/adding-labels-to-issues)
+- [regex-issue-labeler](https://github.com/marketplace/actions/regex-issue-labeler)
+  - add labels based on regex match
+- [label actions](https://github.com/marketplace/actions/label-actions)
+  - uses yaml like format to match, can also control some actions
+- Honarable mention: [issues-helper](https://github.com/marketplace/actions/issues-helper)
+  - [en-US](https://github.com/actions-cool/issues-helper/blob/main/README.en-US.md)
 
 ## Releases
 - [Semantic Release + Github Action](https://github.com/semantic-release/semantic-release/blob/master/docs/recipes/ci-configurations/github-actions.md)
@@ -35,4 +43,5 @@ Github Actions to help developers with common CI/CD tasks
   - Creates Releases
 - [Release Drafter](https://github.com/marketplace/actions/release-drafter)
   - PR based release drafting
+- [Changelog generate](https://github.com/marketplace/actions/generate-changelog)
 - [Auto](https://intuit.github.io/auto/docs)
