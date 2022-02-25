@@ -20,7 +20,7 @@ Github Actions to help developers with common CI/CD tasks
 ### Feedback
 - [Test Reporter](https://github.com/marketplace/actions/test-reporter)
   - Seems like a nice way to visualize test data on pipeline
-- [Jest Coverage Report](https://github.com/marketplace/actions/jest-coverage-report)
+- [Jest Coverage Report](./src/jest/pr-coverage-report.yml)
   - Show test results on PR comment
 - [DangerJS](https://danger.systems/js/)
   - Automatic feedback, code review triage
