@@ -9,12 +9,12 @@ Github Actions to help developers with common CI/CD tasks
 - [Heroku](https://github.com/marketplace/actions/deploy-to-heroku)
 
 ## Lint
-- [Rubocop](./rubocop.yml)
+- [Rubocop](./src/rails/rubocop.yml)
 - [ESLint + Reviewdog](https://github.com/marketplace/actions/run-eslint-with-reviewdog)
 - [Commitlint](https://github.com/marketplace/actions/commit-linter)
 
 ## Test
-- [Rails rspec](./rails_mongo_redis_test.yml)
+- [Rails rspec](./src/rails/rspec/mongo_redis.yml)
 
 ### Feedback
 - [Test Reporter](https://github.com/marketplace/actions/test-reporter)
