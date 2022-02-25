@@ -1,0 +1,38 @@
+name: PR Expo preview
+
+on:
+  pull_request:
+
+jobs:
+  preview:
+    name: Create preview
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🏗 Setup repo
+        uses: actions/checkout@v2
+
+      - name: 🏗 Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          cache: yarn
+          cache-dependency-path: '**/yarn.lock'
+
+      - name: 🏗 Setup Expo
+        uses: expo/expo-github-action@v7
+        with:
+          expo-version: 5.x.x
+          token: ${{ secrets.EXPO_TOKEN }}
+
+      - name: 📦 Install dependencies
+        run: yarn install --immutable
+
+      - name: 🚀 Publish preview
+        run: yarn workspace app expo publish --release-channel=pr-${{ github.event.number }} --non-interactive
+        # if working in single package repo,
+        # ignore `workspace app`
+      - name: 💬 Comment preview
+        uses: expo/expo-github-action/preview-comment@v7
+        with:
+          project: apps/app # path/to/app.json
+          channel: pr-${{ github.event.number }}

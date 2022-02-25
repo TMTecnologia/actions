@@ -1,13 +1,7 @@
 name: Expo Publish
-#source: https://github.com/marketplace/actions/expo-github-action
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - apps/app/**
-      # monorepo folder structure
+  workflow_dispatch:
 
 jobs:
   publish:
