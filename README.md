@@ -10,8 +10,9 @@ Github Actions to help developers with common CI/CD tasks
 
 ## Lint
 - [Rubocop](./src/rails/rubocop.yml)
-- [ESLint + Reviewdog](https://github.com/marketplace/actions/run-eslint-with-reviewdog)
-- [Commitlint](https://github.com/marketplace/actions/commit-linter)
+- [ESLint + Reviewdog](./src/eslint/reviewdog.yml)
+- [Commitlint](./src/commitlint/conventional.yml)
+  - [Gitmoji](./src/commitlint/gitmoji.yml)
 
 ## Test
 - [Rails rspec](./src/rails/rspec/mongo_redis.yml)

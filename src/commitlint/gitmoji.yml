@@ -1,0 +1,31 @@
+name: Lint Gitmoji Messages
+
+on: [pull_request]
+
+jobs:
+  commitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🏗 Setup repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: 🏗 Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          cache: yarn
+          cache-dependency-path: '**/yarn.lock'
+
+      - name: 📦 Install dependencies
+        run: yarn install --immutable
+
+      # https://github.com/arvinxx/gitmoji-commit-workflow/tree/master/packages/commitlint-plugin#fetch-error
+      - name: 📦 fetch gitmoji JSON
+        run: |
+          curl https://raw.githubusercontent.com/carloscuesta/gitmoji/master/src/data/gitmojis.json > node_modules/commitlint-plugin-gitmoji/lib/gitmojis.json
+
+      - uses: wagoid/commitlint-github-action@v4
+        env:
+          NODE_PATH: ${{ github.workspace }}/node_modules
